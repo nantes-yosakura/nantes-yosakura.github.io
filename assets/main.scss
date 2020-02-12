@@ -1,0 +1,18 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+.navbar-logo {
+  background-image: url("/assets/logo.png") !important;
+  display: inline-block;
+  width: 4.5rem;
+  height: 3rem;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-image: none;
+  background-size: auto;
+  background-size: 100% 100%;
+}

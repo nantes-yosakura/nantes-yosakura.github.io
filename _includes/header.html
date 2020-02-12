@@ -1,0 +1,38 @@
+<header class="site-header bg-light" role="banner">
+  <nav class="container navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}"
+      ><span class="navbar-logo"></span
+    ></a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarSupportedContent"
+    >
+      {%- assign default_paths = site.pages | map: "path" -%} {%- assign
+      page_paths = site.header_pages | default: default_paths -%} {%- if
+      page_paths -%}
+      <nav class="navbar-nav">
+        {%- for path in page_paths -%} {%- assign current_page = site.pages |
+        where: "path", path | first -%} {%- if current_page.title -%}
+        <a
+          class="nav-item nav-link{% if current_page.path == page.path %} active{% endif %}"
+          href="{{ current_page.url | relative_url }}"
+          >{{ current_page.title | escape }}</a
+        >
+        {%- endif -%} {%- endfor -%}
+      </nav>
+      {%- endif -%}
+    </div>
+  </nav>
+</header>

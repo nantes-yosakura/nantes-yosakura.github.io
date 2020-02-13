@@ -1,0 +1,12 @@
+- index.md
+- locaux-horaires.md
+- activites.md
+- name: Tournoi 2020
+  paths:
+    - tournoi/presentation.md
+    - tournoi/programme.md
+    - tournoi/tournois.md
+    - tournoi/inscription.html
+    - tournoi/pre-inscrits.html
+    - tournoi/acces.md
+    - tournoi/sur-place.md

@@ -1,0 +1,139 @@
+---
+layout: page
+title: Inscription
+---
+
+<form action="http://127.0.0.1:8080/subscribe" method="POST">
+  <div class="form-group">
+    <label for="inscription-form-last-name">Nom</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inscription-form-last-name"
+      name="last-name"
+      placeholder="Zéreau"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="inscription-form-first-name">Prénom</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inscription-form-first-name"
+      name="first-name"
+      placeholder="Lila"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="inscription-form-email">Courriel</label>
+    <input
+      type="email"
+      class="form-control"
+      id="inscription-form-email"
+      name="email"
+      placeholder="lila.zereau@lizzie.org"
+      required
+    />
+  </div>
+  <div id="inscription-form-type-container">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        id="inscription-form-type-player"
+        name="type"
+        value="player"
+        checked
+      />
+      <label class="form-check-label" for="inscription-form-type-player"
+        >Joueur⋅se</label
+      >
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        id="inscription-form-type-non-player"
+        name="type"
+        value="non-player"
+      />
+      <label class="form-check-label" for="inscription-form-type-non-player"
+        >Accompagnateur⋅rice</label
+      >
+    </div>
+  </div>
+  <div id="inscription-form-player-details">
+    <div class="form-group">
+      <label for="inscription-form-club">Club (code)</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inscription-form-club"
+        name="club"
+        placeholder="44Na"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="inscription-form-level">Niveau</label>
+      <select
+        class="form-control"
+        id="inscription-form-level"
+        name="level"
+        required
+      >
+        <option value="">---</option>
+        <option value="nc">Non connu</option>
+        <option value="20k">20 Kyu</option>
+        <option value="19k">19 Kyu</option>
+        <option value="18k">18 Kyu</option>
+        <option value="17k">17 Kyu</option>
+        <option value="16k">16 Kyu</option>
+        <option value="15k">15 Kyu</option>
+        <option value="14k">14 Kyu</option>
+        <option value="13k">13 Kyu</option>
+        <option value="12k">12 Kyu</option>
+        <option value="11k">11 Kyu</option>
+        <option value="10k">10 Kyu</option>
+        <option value="9k">9 Kyu</option>
+        <option value="8k">8 Kyu</option>
+        <option value="7k">7 Kyu</option>
+        <option value="6k">6 Kyu</option>
+        <option value="5k">5 Kyu</option>
+        <option value="4k">4 Kyu</option>
+        <option value="3k">3 Kyu</option>
+        <option value="2k">2 Kyu</option>
+        <option value="1k">1 Kyu</option>
+        <option value="1d">1 Dan</option>
+        <option value="2d">2 Dan</option>
+        <option value="3d">3 Dan</option>
+        <option value="4d">4 Dan</option>
+        <option value="5d">5 Dan</option>
+        <option value="6d">6 Dan</option>
+        <option value="7d">7 Dan</option>
+        <option value="8d">8 Dan</option>
+        <option value="1p">1 Dan Pro</option>
+        <option value="2p">2 Dan Pro</option>
+        <option value="3p">3 Dan Pro</option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">S'inscrire</button>
+</form>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var details;
+    $("input[type=radio][name='type']").change(function() {
+      if (this.value == "non-player") {
+        details = $("#inscription-form-player-details").detach();
+      } else {
+        console.log(details);
+        $("#inscription-form-type-container").after(details);
+        details = null;
+      }
+    });
+  });
+</script>

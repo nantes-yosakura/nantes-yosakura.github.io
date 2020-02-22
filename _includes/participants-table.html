@@ -1,0 +1,47 @@
+<div id="participants-table">
+  <p>Chargement des pré-inscrits…</p>
+</div>
+
+<script type="application/javascript">
+  $("document").ready(function() {
+    fetch("https://nantes-tournament.appspot.com/participants")
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(json) {
+        var html =
+          '<table class="table">' +
+          "<thead>" +
+          "<tr>" +
+          '<th scope="col">Nom</th>' +
+          '<th scope="col">Inscription</th>' +
+          '<th scope="col">Club</th>' +
+          '<th scope="col">Niveau</th>' +
+          "</tr>" +
+          "</thead>" +
+          "<tbody>";
+        for (var i = 0; i < json.length; i++) {
+          var p = json[i];
+          html +=
+            "<tr>" +
+            "<td>" +
+            p["first-name"] +
+            " " +
+            p["last-name"] +
+            "</td>" +
+            "<td>" +
+            (p["type"] === "player" ? "Joueur⋅se" : "Accompagnateur⋅rice") +
+            "</td>" +
+            "<td>" +
+            (p["type"] === "player" ? p["club"] : "") +
+            "</td>" +
+            "<td>" +
+            (p["type"] === "player" ? p["level"] : "") +
+            "</td>" +
+            "</tr>";
+        }
+        html += "</tbody>" + "</table>";
+        $("#participants-table").html(html);
+      });
+  });
+</script>

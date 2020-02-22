@@ -5,9 +5,7 @@ title: Locaux & Horaires
 
 ## Maison des Jeux
 
-Pour la réunion principale du club le samedi, à partir de 14H30, nous
-nous retrouvons à la Maison des Jeux (au premier étage : escalier de
-droite en entrant puis deuxième porte à gauche).
+Pour la réunion principale du club le samedi, à partir de 14H30, nous nous retrouvons à la Maison des Jeux (au premier étage : escalier de droite en entrant puis deuxième porte à gauche).
 
 La Maison des Jeux se trouve au 14 rue Michel Rocher, 44200 Nantes.
 
@@ -15,7 +13,7 @@ La Maison des Jeux se trouve au 14 rue Michel Rocher, 44200 Nantes.
 
 ## Bistro du Commerce
 
-Les autres jours, il est courant que des joueurs du club se retrouvent
-au Bistro du Commerce, à partir de 18&nbsp;h en semaine et 15&nbsp;h le dimanche.
+Les autres jours, il est courant que des joueurs du club se retrouvent au Bistro du Commerce, à partir de 18&nbsp;h en semaine et 15&nbsp;h le dimanche.
+Si vous ne nous trouvez pas, demandez si les joueurs de Go sont là aux serveur⋅se⋅s, ils nous connaissent&nbsp;!
 
 <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-1.5648972988128664%2C47.210291044788946%2C-1.5514540672302246%2C47.216653262032224&amp;layer=mapnik&amp;marker=47.213472248820494%2C-1.5581756830215454" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=47.21347&amp;mlon=-1.55818#map=17/47.21347/-1.55818">Voir en plus grand sur OpenStreetMap.org</a></small>

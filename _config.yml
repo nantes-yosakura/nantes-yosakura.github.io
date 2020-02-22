@@ -1,8 +1,4 @@
 title: Club de Go Nantes Yosakura
-header_pages:
-  - index.md
-  - locaux-horaires.md
-  - activites.md
 description: "Site internet du club de Go Nantes Yosakura."
 baseurl: ""
 url: "https://nantes.jeudego.org"

@@ -1,47 +1,47 @@
 <div id="participants-table">
-  <p>Chargement des pré-inscrits…</p>
+  <noscript>
+    <p>
+      Javascript est désactivé : la liste des pré-inscrit⋅e⋅s ne pourra pas être
+      chargée.
+    </p>
+  </noscript>
 </div>
 
 <script type="application/javascript">
   $("document").ready(function() {
-    fetch("https://nantes-tournament.appspot.com/participants")
+    $("#participants-table").text("Chargement des pré-inscrit⋅e⋅s…");
+    fetch("{{ site.endpoint_url }}/participants")
       .then(function(response) {
         return response.json();
       })
       .then(function(json) {
-        var html =
-          '<table class="table">' +
-          "<thead>" +
-          "<tr>" +
-          '<th scope="col">Nom</th>' +
-          '<th scope="col">Inscription</th>' +
-          '<th scope="col">Club</th>' +
-          '<th scope="col">Niveau</th>' +
-          "</tr>" +
-          "</thead>" +
-          "<tbody>";
+        var tbody = $("<tbody>");
+        var table = $("<table>", { class: "table" })
+          .append(
+            $("<thead>").append(
+              $("<tr>")
+                .append($("<th>", { scope: "col" }).text("Nom"))
+                .append($("<th>", { scope: "col" }).text("Inscription"))
+                .append($("<th>", { scope: "col" }).text("Club"))
+                .append($("<th>", { scope: "col" }).text("Niveau"))
+            )
+          )
+          .append(tbody);
         for (var i = 0; i < json.length; i++) {
           var p = json[i];
-          html +=
-            "<tr>" +
-            "<td>" +
-            p["first-name"] +
-            " " +
-            p["last-name"] +
-            "</td>" +
-            "<td>" +
-            (p["type"] === "player" ? "Joueur⋅se" : "Accompagnateur⋅rice") +
-            "</td>" +
-            "<td>" +
-            (p["type"] === "player" ? p["club"] : "") +
-            "</td>" +
-            "<td>" +
-            (p["type"] === "player" ? p["level"] : "") +
-            "</td>" +
-            "</tr>";
+          tbody.append(
+            $("<tr>")
+              .append($("<td>").text(p["first-name"] + " " + p["last-name"]))
+              .append(
+                $("<td>").text(
+                  p["type"] === "player" ? "Joueur⋅se" : "Accompagnateur⋅rice"
+                )
+              )
+              .append($("<td>").text(p["type"] === "player" ? p["club"] : "-"))
+              .append($("<td>").text(p["type"] === "player" ? p["level"] : "-"))
+          );
         }
-        html += "</tbody>" + "</table>";
-        $("#participants-table").html(html);
+        $("#participants-table").html(table);
       });
   });
 </script>

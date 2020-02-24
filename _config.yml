@@ -2,6 +2,7 @@ title: Club de Go Nantes Yosakura
 description: "Site internet du club de Go Nantes Yosakura."
 baseurl: ""
 url: "https://nantes.jeudego.org"
+endpoint_url: "https://nantes-tournament.appspot.com"
 
 markdown: kramdown
 plugins:

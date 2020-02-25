@@ -31,7 +31,7 @@
           var p = json[i];
           tbody.append(
             $("<tr>")
-              .append($("<td>").text(p["first-name"] + " " + p["last-name"]))
+              .append($("<td>").text(p["first_name"] + " " + p["last_name"]))
               .append(
                 $("<td>").text(
                   p["type"] === "player" ? "Joueur⋅se" : "Accompagnateur⋅rice"

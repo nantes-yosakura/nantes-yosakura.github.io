@@ -3,6 +3,9 @@ description: "Site internet du club de Go Nantes Yosakura."
 baseurl: ""
 url: "https://nantes.jeudego.org"
 endpoint_url: "https://nantes-tournament.appspot.com"
+association_name: "Yosakura Club de Go de Nantes"
+email: "clubyosakura@yahoo.fr"
+president: "Marc Jégou"
 
 markdown: kramdown
 plugins:

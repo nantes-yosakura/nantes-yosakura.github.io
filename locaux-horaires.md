@@ -7,7 +7,7 @@ title: Locaux & Horaires
 
 Pendant l'épidémie, nous nous retrouvons surtout en ligne. Voici les deux endroits où vous pouvez nous rejoindre :
 
-- [sur OGS](https://online-go.com/group/4702)
+- [sur OGS](https://online-go.com/group/4702). Pour y accéder, `Groupes > Nantes Yosakura`
 - [sur KGS](https://www.gokgs.com/). Pour y accéder, `Salles > Liste des salles > Clubs > Club de Nantes Yosakura`
 
 ## Après un futur retour à la normale…

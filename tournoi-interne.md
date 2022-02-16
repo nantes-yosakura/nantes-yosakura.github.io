@@ -3,6 +3,6 @@ layout: page
 title: Tournoi interne
 ---
 
-Samedi 30 et dimanche 31 janvier 2021, c'est le tournoi interne du club !
+Samedi 26 février 2022, c'est le tournoi interne du club !
 
-Rejoignez le [groupe OGS](https://online-go.com/group/4702), le tournoi y sera organisé.
+Rendez-vous à la maison des jeux pour y participer :)

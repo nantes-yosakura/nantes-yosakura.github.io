@@ -65,15 +65,8 @@ GEM
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
-<<<<<<< HEAD
-    minitest (5.15.0)
-    multipart-post (2.1.1)
-    nokogiri (1.13.9)
-      mini_portile2 (~> 2.8.0)
-=======
     minitest (5.16.3)
     nokogiri (1.13.9-x86_64-linux)
->>>>>>> 65a91cd (Update internal tournament and migrate pages to GH actions)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
